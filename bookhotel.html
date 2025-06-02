@@ -38,118 +38,18 @@
     </div>
 </div>
 
-<!--
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-2" style="background-color:darkcyan;">
-            <p>Placer icon ici</p>
-        </div>
-        <div class="col-2 text-center" style="background-color:darkcyan;">
-            <h5>France-Etranger</h5>
-        </div>
-    </div>
-	
-	<div class="row">
-        <div class="col-2" style="background-color:darkcyan;">
-            <p>Lieu de séjour</p>
-        </div>
-        <div class="col-2 d-flex align-items-center "style="background-color:darkcyan;">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Destination">
-            </div>
-        </div>   
-        
-    <div class="row">
-        <div class="col-2 text-center" style="background-color:darkcyan;">
-            <p>Arrivé</p>
-            <div class="input-group">
-                <input type="date" class="form-control" placeholder="Destination">
-            </div>
-        </div>  
-        
-        <div class="col-2 text-center" style="background-color:darkcyan;">
-            <p>Départ</p>
-            <div class="input-group">
-                <input type="date" class="form-control" placeholder="Destination">
-            </div>         
-        </div>
-        <div class="row">
-            <div class="col-1" style="background-color:darkcyan;">
-                <p>Adulte</p>
-            </div>
-
-            <div class="col-1 input" style="background-color:darkcyan;">
-                <input type="number" class="form-control">
-            </div> 
-
-            <div class="col-1" style="background-color:darkcyan;">
-                <span class="mdi mdi-plus-box-outline fs-3"></span>
-            </div> 
-
-            <div class="col-1" style="background-color:darkcyan;">
-                <span class="mdi mdi-minus-box-outline fs-3"></span>
-            </div> 
-        </div>
-
-        <div class="row">
-            <div class="col-1" style="background-color:darkcyan;">
-                <p>Enfants</p>
-            </div>
-
-            <div class="col-1 input" style="background-color:darkcyan;">
-                <input type="number" class="form-control">
-            </div> 
-
-            <div class="col-1" style="background-color:darkcyan;">
-                <span class="mdi mdi-plus-box-outline fs-3"></span>
-            </div> 
-
-            <div class="col-1" style="background-color:darkcyan;">
-                <span class="mdi mdi-minus-box-outline fs-3"></span>
-            </div> 
-        </div>
-
-        <div class="row">
-            <div class="col-1" style="background-color:darkcyan;">
-                <p>Chambres</p>
-            </div>
-
-            <div class="col-1 input" style="background-color:darkcyan;">
-                <input type="number" class="form-control">
-            </div> 
-
-            <div class="col-1" style="background-color:darkcyan;">
-                <span class="mdi mdi-plus-box-outline fs-3"></span>
-            </div> 
-
-            <div class="col-1" style="background-color:darkcyan;">
-                <span class="mdi mdi-minus-box-outline fs-3"></span>
-            </div> 
-        </div>
-        <div class="row">
-            <div class="col-4 text-center" style="background-color:darkcyan;">
-                <button type="button" class="btn btn-success btn-lg">Success</button>
-            </div>
-        </div>
-    
-        <div class="row">
-            <div class="col-4 text-center" style="background-color:darkcyan;">
-                <button type="button" class="btn btn-success btn-lg">Success</button>
-            </div>
-        </div>
-	-->
     <div class="container">
         <div class="row">
             <div class="col-4">
                 <table class="table table-bordered text-center">
                     <thead>
-                        <tr style="background-color:darkcyan; color:white;">
+                        <tr>
                             <th colspan="2"><span class="mdi mdi-office-building fs-3"></span></th>
                             <th colspan="2">France-Etranger</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="background-color:darkcyan;">
+                        <tr>
                             <td colspan="2">Lieu de séjour</td>
                             <td colspan="2">
                                 <div class="input-group">
@@ -157,7 +57,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr style="background-color:darkcyan;">
+                        <tr>
                             <td colspan="2">
                                 <p>Arrivée</p>
                                 <div class="input-group">
@@ -171,43 +71,43 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr style="background-color:darkcyan;">
+                        <tr>
                             <td>Adulte</td>
                             <td>
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <input type="number" class="form-control w-50">
+                                    <input id="adulte" type="text" class="form-control w-50" value="0" readonly>
                                     <td>   
-                                        <span class="mdi mdi-plus-box-outline fs-3 "></span>
+                                        <button> <span class="mdi mdi-plus-box-outline fs-3 "></span> </button>
                                     </td>
                                     <td>    
-                                        <span class="mdi mdi-minus-box-outline fs-3"></span>
+                                        <button> <span class="mdi mdi-minus-box-outline fs-3"></span></button> 
                                     </td>    
                                 </div>
                             </td>
                         </tr>   
                             <td>Enfants</td>
                             <td>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <input type="number" class="form-control w-50">
+                                <div class="d-flex justify-content-center align-items-center" >
+                                    <input id="enfant" type="text" class="form-control w-50" value="0" readonly>
                                     <td>   
-                                        <span class="mdi mdi-plus-box-outline fs-3 "></span>
+                                        <button> <span class="mdi mdi-plus-box-outline fs-3 "></span></button> 
                                     </td>
                                     <td>    
-                                        <span class="mdi mdi-minus-box-outline fs-3"></span>
+                                        <button> <span class="mdi mdi-minus-box-outline fs-3"></span></button> 
                                     </td> 
                                 </div>
                             </td>
                         </tr>
-                        <tr style="background-color:darkcyan;">
+                        <tr >
                             <td>Chambres</td>
                             <td>
                                 <div class="d-flex justify-content-center align-items-center">
-                                    <input type="number" class="form-control w-50">
+                                    <input id="chambre" type="text" class="form-control w-50" value="0" readonly>
                                     <td>   
-                                        <span class="mdi mdi-plus-box-outline fs-3 "></span>
+                                        <button onclick="chambreplus()"> <span class="mdi mdi-plus-box-outline fs-3 "></span></button> 
                                     </td>
                                     <td>    
-                                        <span class="mdi mdi-minus-box-outline fs-3"></span>
+                                        <button onclick="chambremoins()"> <span class="mdi mdi-minus-box-outline fs-3"></span></button> 
                                     </td> 
                                 </div>
                             </td>
@@ -230,6 +130,6 @@
         </div>
     </div>
     
-
+<script src="script.js"></script>
 </body>
 </html>
