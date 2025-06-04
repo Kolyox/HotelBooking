@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!doctype html>
 <html lang="fr">
 <head>
@@ -7,6 +6,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
   <style>
+    body{
+        min-height: 100vh;
+        background: #00A568;
+        background: linear-gradient(-45deg,rgba(0, 165, 104, 1) 28%, rgba(75, 164, 227, 1) 100%);
+    }
     button{
         border:none;
         border-radius: 12px;
@@ -15,6 +19,9 @@
     button:hover{
         color: green !important; 
         border: none;
+    }
+    .form-check-input,.form-check-label{
+        cursor: pointer;
     }
 
   </style>
@@ -123,7 +130,15 @@
                                     </td> 
                                 </div>
                             </td>
-                        </tr>  
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="form-check d-flex justify-content-center gap-3">
+                                    <input class="form-check-input" type="checkbox" id="voyage">
+                                    <label class="form-check-label" for="voyage">Je voyage pour le travail</label>
+                                </div>
+                            </td>
+                        </tr>
                         <tr> 
                             <td colspan="4">
                                 <button type="button" class="btn btn-success btn-lg px-5">Rechercher</button>
@@ -131,7 +146,7 @@
                         </tr>
                         <tr> 
                             <td colspan="4">
-                                <button type="button" class="btn btn-primary btn-lg px-5"> Effacer </button>
+                                <button type="button" onclick="effacerChamps()" class="btn btn-primary btn-lg px-5"> Effacer </button>
                             </td>
                         </tr>
 
@@ -144,140 +159,4 @@
     
 <script src="script.js"></script>
 </body>
-=======
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>Hotel</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
-</head>
-<header>
-	<section class="container">
-		<div class="row">
-			<div class="offset col-md-3"> </div>
-			<div class="col-md-6 mt-3 text-center">
-				<h1 class="display-3">Booking Hotel</h1>
-				<p>Indiquez vos dates de réservation - Toute annulation doit se faire 48h avant<p>
-			</div>
-		</div>
-	<section>
-<header>
-
-<body>
-
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-1 border">Case 1</div>
-        <div class="col-1 border">Case 2</div>
-        <div class="col-1 border">Case 3</div>
-        <div class="col-1 border">Case 4</div>
-        <div class="col-1 border">Case 5</div>
-        <div class="col-1 border">Case 6</div>
-        <div class="col-1 border">Case 7</div>
-        <div class="col-1 border">Case 8</div>
-        <div class="col-1 border">Case 9</div>
-        <div class="col-1 border">Case 10</div>
-        <div class="col-1 border">Case 11</div>
-        <div class="col-1 border">Case 12</div>
-    </div>
-</div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <table class="table table-bordered text-center">
-                    <thead>
-                        <tr>
-                            <th colspan="2"><span class="mdi mdi-office-building fs-3"></span></th>
-                            <th colspan="2">France-Etranger</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="2">Lieu de séjour</td>
-                            <td colspan="2">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Destination">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <p>Arrivée</p>
-                                <div class="input-group">
-                                    <input type="date" class="form-control">
-                                </div>
-                            </td>
-                            <td colspan="2" > 
-                                <p>Départ</p>
-                                <div class="input-group">
-                                    <input type="date" class="form-control">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Adulte</td>
-                            <td>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <input id="adulte" type="text" class="form-control w-50" value="0" readonly>
-                                    <td>   
-                                        <button> <span class="mdi mdi-plus-box-outline fs-3 "></span> </button>
-                                    </td>
-                                    <td>    
-                                        <button> <span class="mdi mdi-minus-box-outline fs-3"></span></button> 
-                                    </td>    
-                                </div>
-                            </td>
-                        </tr>   
-                            <td>Enfants</td>
-                            <td>
-                                <div class="d-flex justify-content-center align-items-center" >
-                                    <input id="enfant" type="text" class="form-control w-50" value="0" readonly>
-                                    <td>   
-                                        <button> <span class="mdi mdi-plus-box-outline fs-3 "></span></button> 
-                                    </td>
-                                    <td>    
-                                        <button> <span class="mdi mdi-minus-box-outline fs-3"></span></button> 
-                                    </td> 
-                                </div>
-                            </td>
-                        </tr>
-                        <tr >
-                            <td>Chambres</td>
-                            <td>
-                                <div class="d-flex justify-content-center align-items-center">
-                                    <input id="chambre" type="text" class="form-control w-50" value="0" readonly>
-                                    <td>   
-                                        <button onclick="chambreplus()"> <span class="mdi mdi-plus-box-outline fs-3 "></span></button> 
-                                    </td>
-                                    <td>    
-                                        <button onclick="chambremoins()"> <span class="mdi mdi-minus-box-outline fs-3"></span></button> 
-                                    </td> 
-                                </div>
-                            </td>
-                        </tr>  
-                        <tr> 
-                            <td colspan="4">
-                                <button type="button" class="btn btn-success btn-lg px-5">Rechercher</button>
-                            </td>
-                        </tr>
-                        <tr> 
-                            <td colspan="4">
-                                <button type="button" class="btn btn-primary btn-lg px-5"> Effacer </button>
-                            </td>
-                        </tr>
-
-                       
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    
-<script src="script.js"></script>
-</body>
->>>>>>> 610dd64415dc88b9df2094725ff1ba43d1431ff3
 </html>
