@@ -31,15 +31,16 @@ function adultemoins(){
 function enfantplus() {
     let input = document.getElementById("enfant");
     input.value = parseInt(input.value) + 1;
+    ajouterage();
 }
 
 function enfantmoins(){
     let input = document.getElementById("enfant");
     let value = parseInt(input.value);
-
     if (value>0){
         input.value-=1;
     }
+    ajouterage();
 }
 
 
@@ -77,3 +78,27 @@ function rechercher(){
         document.getElementById("travail").innerHTML="Non";
     }    
 }
+
+function ajouterage() {
+    const nbenfants = parseInt(document.getElementById("enfant").value) || 0;
+    const sectionage = document.getElementById("zone-age");
+
+    // supprime les anciennes lignes ajouté
+    sectionage.innerHTML = ""; 
+
+    // ajouter des nouvelles lignes en fonction de la valeur de l'input du nombre d'enfants
+    for (let i = 1; i <= nbenfants; i++) {
+        const ligne = document.createElement('tr');
+        ligne.innerHTML = `
+            <td>Âge ${i}</td>
+            <td colspan="3">
+                <div class="d-flex justify-content-center align-items-center">
+                    <input type="number" class="form-control w-50" min="0" max="18">
+                </div>
+            </td>
+        `;
+        sectionage.appendChild(ligne);
+    }
+}
+
+
