@@ -61,3 +61,19 @@ function effacerChamps() {
 
 
 
+function rechercher(){
+    const nbadulte = document.getElementById("adulte").value;
+    document.getElementById("nbadulte").innerHTML=nbadulte;
+
+    const nbenfant = document.getElementById("enfant").value;
+    document.getElementById("nbenfant").innerHTML=nbenfant;
+
+    const nbchambre = document.getElementById("chambre").value;
+    document.getElementById("nbchambre").innerHTML=nbchambre;
+
+    if (document.getElementById("voyage").checked == true){
+        document.getElementById("travail").innerHTML="Oui";
+    }else{
+        document.getElementById("travail").innerHTML="Non";
+    }    
+}

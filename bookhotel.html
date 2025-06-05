@@ -23,6 +23,9 @@
     .form-check-input,.form-check-label{
         cursor: pointer;
     }
+    .titre{
+        color: #03396C;
+    }
 
   </style>
 </head>
@@ -141,7 +144,7 @@
                         </tr>
                         <tr> 
                             <td colspan="4">
-                                <button type="button" class="btn btn-success btn-lg px-5">Rechercher</button>
+                                <button type="button" onclick="rechercher()" class="btn btn-success btn-lg px-5">Rechercher</button>
                             </td>
                         </tr>
                         <tr> 
@@ -153,6 +156,17 @@
                        
                     </tbody>
                 </table>
+            </div>
+            <div class="offset-3 col-5" style="background-color: white;">
+                    <h1 class="fw-bold text-center mb-5 titre">Confirmation de réservations</h1>
+                    <p class="fw-bold fs-4">Nombre(s) d'adulte(s):</p>
+                    <p id="nbadulte" class="fs-5">Inconnu</p>
+                    <p class="fw-bold fs-4">Nombre(s) d'enfant(s):</p>
+                    <p id="nbenfant" class="fs-5">Inconnu</p>
+                    <p class="fw-bold fs-4">Nombre(s) de chambre(s):</p>
+                    <p id="nbchambre" class="fs-5">Inconnu</p>
+                    <p class="fw-bold fs-4">Voyage pour le travail</p>
+                    <p id="travail" class="fs-5">Inconnu</p>
             </div>
         </div>
     </div>
