@@ -63,6 +63,10 @@ function effacerChamps() {
 
 
 function rechercher(){
+
+    const lieu = document.getElementById("lieu").value;
+    document.getElementById("place").innerHTML=lieu;
+
     const nbadulte = document.getElementById("adulte").value;
     document.getElementById("nbadulte").innerHTML=nbadulte;
 
@@ -72,6 +76,13 @@ function rechercher(){
     const nbchambre = document.getElementById("chambre").value;
     document.getElementById("nbchambre").innerHTML=nbchambre;
 
+    const datearrivee = document.getElementById("date_arrivee").value;
+    document.getElementById("arriver").innerHTML = datearrivee;
+
+    const datedepart = document.getElementById("date_depart").value;
+    document.getElementById("depart").innerHTML = datedepart;
+
+
     if (document.getElementById("voyage").checked == true){
         document.getElementById("travail").innerHTML="Oui";
     }else{
@@ -79,8 +90,11 @@ function rechercher(){
     }    
 }
 
+
+
+
 function ajouterage() {
-    const nbenfants = parseInt(document.getElementById("enfant").value) || 0;
+    const nbenfants = parseInt(document.getElementById("enfant").value);
     const sectionage = document.getElementById("zone-age");
 
     // supprime les anciennes lignes ajouté
@@ -88,9 +102,9 @@ function ajouterage() {
 
     // ajouter des nouvelles lignes en fonction de la valeur de l'input du nombre d'enfants
     for (let i = 1; i <= nbenfants; i++) {
-        const ligne = document.createElement('tr');
-        ligne.innerHTML = `
-            <td>Âge ${i}</td>
+        const ligne = document.createElement("tr");
+        ligne.innerHTML =
+            `<td>Âge ${i}</td>
             <td colspan="3">
                 <div class="d-flex justify-content-center align-items-center">
                     <input type="number" class="form-control w-50" min="0" max="18">
