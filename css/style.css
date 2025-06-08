@@ -1,0 +1,19 @@
+body{
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #fefcea, #3083db8f);
+}
+button{
+    border:none;
+    border-radius: 12px;
+}
+
+button:hover{
+    color: #03396C !important; 
+    border: none;
+}
+.form-check-input,.form-check-label{
+    cursor: pointer;
+    }
+.titre{
+    color: #03396C;
+}
